@@ -68,25 +68,25 @@
    http://localhost:5173 sahifasida loyihani ko‘ring.
 
 💻 Skrinshotlar
-   Asosiy Panel Tranzaksiyalar Hisobotlar
-
+Asosiy Panel Tranzaksiyalar Hisobotlar
 🧰 Foydalanilgan Texnologiyalar
-   Texnologiya Maqsad
-   React UI komponentlarini yaratish
-   TypeScript Statik tiplash va xavfsiz kod
-   Bootstrap Responsiv dizayn
-   Chart.js Grafiklar va vizualizatsiya
-   React Transition Group Animatsiyalar qo‘shish
-   LocalStorage Ma'lumotlarni saqlash
+Texnologiya Maqsad
+React UI komponentlarini yaratish
+TypeScript Statik tiplash va xavfsiz kod
+Bootstrap Responsiv dizayn
+Chart.js Grafiklar va vizualizatsiya
+React Transition Group Animatsiyalar qo‘shish
+LocalStorage Ma'lumotlarni saqlash
 🌐 API Ma'lumotlari
-   Valyuta kurslari uchun ExchangeRate API ishlatilgan:
-   https://www.exchangerate-api.com
+Valyuta kurslari uchun ExchangeRate API ishlatilgan:
+https://www.exchangerate-api.com
+
 📝 Muallif
-   Ism: Shohkboz Nabiev
-   Kasb: Frontend Dasturchi
-   Bog‘lanish: LinkedIn | GitHub
+Ism: Shohkboz Nabiev
+Kasb: Frontend Dasturchi
+Bog‘lanish: LinkedIn | GitHub
 ⚡ Litsenziya
-   Bu loyiha MIT Litsenziyasi asosida tarqatiladi.
+Bu loyiha MIT Litsenziyasi asosida tarqatiladi.
 
 ## 🔗 **Live Demo**
 
