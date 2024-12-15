@@ -90,4 +90,4 @@
 
 ## 🔗 **Live Demo**
 
-[Loyihani Ko‘rish](https://your-live-link.netlify.app)
+[Loyihani Ko‘rish]([https://financial-dashboard-virid-seven.vercel.app/])
