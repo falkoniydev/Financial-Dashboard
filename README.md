@@ -57,6 +57,7 @@
    ```plaintext
    VITE_API_URL=https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD
    ```
+   Eslatma: YOUR_API_KEY o‘rniga o‘z API kalitingizni qo‘ying.
 
 4. **Loyihani Ishga Tushirish**
    ```bash
