@@ -46,49 +46,47 @@
 
 2. **Dependency larni O‘rnatish**
 
-```bash
-npm install
-```
+   ```bash
+   npm install
+   ```
 
 3. **API Kalitini Sozlash**
 
-ExchangeRate API kalitini https://www.exchangerate-api.com saytidan oling.
-.env faylini yarating va quyidagilarni qo‘shing:
-```plaintext
-VITE_API_URL=https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD
-```
+   ExchangeRate API kalitini https://www.exchangerate-api.com saytidan oling.
+   .env faylini yarating va quyidagilarni qo‘shing:
+   ```plaintext
+   VITE_API_URL=https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD
+   ```
 
 4. **Loyihani Ishga Tushirish**
-```bash
-npm run dev
-```
+   ```bash
+   npm run dev
+   ```
 
 5. **Brauzerda Ochish**
 
-http://localhost:5173 sahifasida loyihani ko‘ring.
+   http://localhost:5173 sahifasida loyihani ko‘ring.
 
 💻 Skrinshotlar
-Asosiy Panel Tranzaksiyalar Hisobotlar
+   Asosiy Panel Tranzaksiyalar Hisobotlar
 
 🧰 Foydalanilgan Texnologiyalar
-Texnologiya Maqsad
-React UI komponentlarini yaratish
-TypeScript Statik tiplash va xavfsiz kod
-Bootstrap Responsiv dizayn
-Chart.js Grafiklar va vizualizatsiya
-React Transition Group Animatsiyalar qo‘shish
-LocalStorage Ma'lumotlarni saqlash
-
+   Texnologiya Maqsad
+   React UI komponentlarini yaratish
+   TypeScript Statik tiplash va xavfsiz kod
+   Bootstrap Responsiv dizayn
+   Chart.js Grafiklar va vizualizatsiya
+   React Transition Group Animatsiyalar qo‘shish
+   LocalStorage Ma'lumotlarni saqlash
 🌐 API Ma'lumotlari
-Valyuta kurslari uchun ExchangeRate API ishlatilgan:
-https://www.exchangerate-api.com
-
+   Valyuta kurslari uchun ExchangeRate API ishlatilgan:
+   https://www.exchangerate-api.com
 📝 Muallif
-Ism: Shohkboz Nabiev
-Kasb: Frontend Dasturchi
-Bog‘lanish: LinkedIn | GitHub
+   Ism: Shohkboz Nabiev
+   Kasb: Frontend Dasturchi
+   Bog‘lanish: LinkedIn | GitHub
 ⚡ Litsenziya
-Bu loyiha MIT Litsenziyasi asosida tarqatiladi.
+   Bu loyiha MIT Litsenziyasi asosida tarqatiladi.
 
 ## 🔗 **Live Demo**
 
