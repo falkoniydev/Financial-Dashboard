@@ -44,33 +44,32 @@
    cd moliyaviy-panel
    ```
 
-Bog‘lamalarni O‘rnatish
+2. **Dependency larni O‘rnatish**
 
 ```bash
 npm install
 ```
 
-API Kalitini Sozlash
+3. **API Kalitini Sozlash**
 
 ExchangeRate API kalitini https://www.exchangerate-api.com saytidan oling.
 .env faylini yarating va quyidagilarni qo‘shing:
 ```plaintext
-Copy code
 VITE_API_URL=https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD
-Loyihani Ishga Tushirish
 ```
 
-```
-bash
-Copy code
+4. **Loyihani Ishga Tushirish**
+```bash
 npm run dev
 ```
-Brauzerda Ochish
+
+5. **Brauzerda Ochish**
 
 http://localhost:5173 sahifasida loyihani ko‘ring.
 
 💻 Skrinshotlar
 Asosiy Panel Tranzaksiyalar Hisobotlar
+
 🧰 Foydalanilgan Texnologiyalar
 Texnologiya Maqsad
 React UI komponentlarini yaratish
@@ -79,6 +78,7 @@ Bootstrap Responsiv dizayn
 Chart.js Grafiklar va vizualizatsiya
 React Transition Group Animatsiyalar qo‘shish
 LocalStorage Ma'lumotlarni saqlash
+
 🌐 API Ma'lumotlari
 Valyuta kurslari uchun ExchangeRate API ishlatilgan:
 https://www.exchangerate-api.com
