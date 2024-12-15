@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f2f2f2;
+}
+
+.container {
+	max-width: 1240px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.chart-container {
+	height: 400px;
+	width: 100%;
+}
+
+/* TransitionList design */
+
+.transaction-enter {
+	opacity: 0;
+	transform: translateY(-20px);
+}
+.transaction-enter-active {
+	opacity: 1;
+	transform: translateY(0);
+	transition: opacity 500ms, transform 500ms;
+}
+.transaction-exit {
+	opacity: 1;
+	transform: translateY(0);
+}
+.transaction-exit-active {
+	opacity: 0;
+	transform: translateY(-20px);
+	transition: opacity 500ms, transform 500ms;
+}
+
+@media (max-width: 768px) {
+	.custom-class {
+		font-size: 14px;
+	}
+}
