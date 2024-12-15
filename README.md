@@ -40,7 +40,7 @@
 
 1. **Loyihani Klonlash**
    ```bash
-   git clone [repository-url](https://github.com/falkoniydev/Financial-Dashboard.git)
+   git clone https://github.com/falkoniydev/Financial-Dashboard.git
    cd moliyaviy-panel
    ```
 
