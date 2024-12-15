@@ -46,52 +46,29 @@
 
 Bog‘lamalarni O‘rnatish
 
-bash
-Copy code
+```bash
 npm install
+```
 
 API Kalitini Sozlash
 
 ExchangeRate API kalitini https://www.exchangerate-api.com saytidan oling.
 .env faylini yarating va quyidagilarni qo‘shing:
-plaintext
+```plaintext
 Copy code
 VITE_API_URL=https://v6.exchangerate-api.com/v6/YOUR_API_KEY/latest/USD
 Loyihani Ishga Tushirish
+```
 
+```
 bash
 Copy code
 npm run dev
+```
 Brauzerda Ochish
 
 http://localhost:5173 sahifasida loyihani ko‘ring.
-📂 Loyiha Tuzilmasi
-plaintext
-Copy code
-src/
-├── assets/ # Statik fayllar (rasmlar va ikonlar)
-├── components/ # Umumiy komponentlar
-│ ├── Navbar.tsx # Navigatsiya paneli
-│ ├── Footer.tsx # Footer
-│ ├── CurrencyConverter.tsx # Valyuta konvertori
-│ ├── TransactionForm.tsx # Tranzaksiya qo‘shish formasi
-│ ├── TransactionList.tsx # Tranzaksiyalar ro‘yxati
-│ ├── charts/ # Grafiklar komponentlari
-│ ├── PieChart.tsx # Doira diagramma
-│ └── BarChart.tsx # Shtab diagramma
-├── context/ # Context API
-│ └── AppContext.tsx # Global holat boshqaruvi
-├── hooks/ # Custom hook'lar
-│ └── useExchangeRates.ts # API dan valyuta kurslarini olish
-├── pages/ # Sahifalar
-│ ├── Home.tsx # Asosiy panel sahifasi
-│ ├── Transactions.tsx # Tranzaksiyalar boshqaruvi
-│ └── Reports.tsx # Hisobotlar sahifasi
-├── types/ # TypeScript interfeyslar
-│ └── Transaction.ts # Tranzaksiya turi
-├── styles/ # Uslub fayllari
-│ └── main.css # Global uslublar
-└── App.tsx # Kirish nuqtasi
+
 💻 Skrinshotlar
 Asosiy Panel Tranzaksiyalar Hisobotlar
 🧰 Foydalanilgan Texnologiyalar
