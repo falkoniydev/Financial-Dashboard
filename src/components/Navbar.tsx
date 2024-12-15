@@ -1,94 +1,96 @@
-// import React from 'react';
-// import { Link } from 'react-router-dom';
-
-// const Navbar: React.FC = () => {
-//   return (
-//     <nav className="navbar navbar-expand-lg navbar-light bg-light">
-//       <div className="container">
-//         <Link className="navbar-brand" to="/">Moliyaviy Panel</Link>
-//         <button
-//           className="navbar-toggler"
-//           type="button"
-//           data-bs-toggle="collapse"
-//           data-bs-target="#navbarNav"
-//           aria-controls="navbarNav"
-//           aria-expanded="false"
-//           aria-label="Toggle navigation"
-//         >
-//           <span className="navbar-toggler-icon"></span>
-//         </button>
-//         <div className="collapse navbar-collapse" id="navbarNav">
-//           <ul className="navbar-nav ms-auto">
-//             <li className="nav-item">
-//               <Link className="nav-link" to="/">Asosiy</Link>
-//             </li>
-//             <li className="nav-item">
-//               <Link className="nav-link" to="/transactions">Tranzaksiyalar</Link>
-//             </li>
-//             <li className="nav-item">
-//               <Link className="nav-link" to="/reports">Hisobotlar</Link>
-//             </li>
-//           </ul>
-//         </div>
-//       </div>
-//     </nav>
-//   );
-// };
-
-// export default Navbar;
-
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Navbar: React.FC = () => {
+	const [isOpen, setIsOpen] = useState(false);
+	const location = useLocation();
+
+	// Toggle menyuni ochish yoki yopish
+	const toggleMenu = () => {
+		setIsOpen(!isOpen);
+	};
+
+	// Sahifa yangilansa, menyuni yopish
+	useEffect(() => {
+		setIsOpen(false);
+	}, [location]);
+
 	return (
-		<nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+		<nav className="navbar navbar-expand-lg navbar-dark">
 			<div className="container">
-				<Link
-					className="navbar-brand"
+				<NavLink
+					className="navbar-brand d-flex align-items-center"
 					to="/"
 				>
-					Moliyaviy Panel
-				</Link>
+					<img
+						src="/logo.png"
+						alt="Logo"
+						width="50"
+						height="50"
+						className="me-2"
+					/>
+					<span className="fw-bold fs-4 text-white">Moliyaviy Panel</span>
+				</NavLink>
+
+				{/* Burger Menu */}
 				<button
-					className="navbar-toggler"
+					className="navbar-toggler border-0"
 					type="button"
 					data-bs-toggle="collapse"
 					data-bs-target="#navbarNav"
 					aria-controls="navbarNav"
-					aria-expanded="false"
+					aria-expanded={isOpen ? "true" : "false"}
 					aria-label="Toggle navigation"
+					onClick={toggleMenu}
 				>
-					<span className="navbar-toggler-icon"></span>
+					{isOpen ? (
+						<span className="close-icon">&times;</span>
+					) : (
+						<span className="navbar-toggler-icon"></span>
+					)}
 				</button>
+
+				{/* NavLinks */}
 				<div
-					className="collapse navbar-collapse"
+					className={`collapse navbar-collapse ${isOpen ? "show" : ""}`}
 					id="navbarNav"
 				>
-					<ul className="navbar-nav ms-auto">
+					<ul
+						className="navbar-nav ms-auto text-center"
+						style={{
+							display: "flex",
+							justifyContent: "space-around",
+							alignItems: "center",
+							gap: "20px",
+							fontWeight: "bold",
+						}}
+					>
 						<li className="nav-item">
-							<Link
+							<NavLink
 								className="nav-link"
 								to="/"
+								onClick={() => setIsOpen(false)}
 							>
 								Asosiy
-							</Link>
+							</NavLink>
 						</li>
 						<li className="nav-item">
-							<Link
+							<NavLink
 								className="nav-link"
 								to="/transactions"
+								onClick={() => setIsOpen(false)}
 							>
 								Tranzaksiyalar
-							</Link>
+							</NavLink>
 						</li>
 						<li className="nav-item">
-							<Link
+							<NavLink
 								className="nav-link"
 								to="/reports"
+								onClick={() => setIsOpen(false)}
 							>
 								Hisobotlar
-							</Link>
+							</NavLink>
 						</li>
 					</ul>
 				</div>
@@ -98,3 +100,86 @@ const Navbar: React.FC = () => {
 };
 
 export default Navbar;
+
+// import React from "react";
+// import { NavLink } from "react-router-dom";
+
+// const Navbar: React.FC = () => {
+// 	return (
+// 		<nav className="navbar navbar-expand-lg navbar-dark">
+// 			<div className="container">
+// 				<NavLink
+// 					className="navbar-brand d-flex align-items-center"
+// 					to="/"
+// 				>
+// 					<img
+// 						src="/logo.png"
+// 						alt="Logo"
+// 						width="50"
+// 						height="50"
+// 						className="me-2"
+// 					/>
+// 					<span className="fw-bold fs-4 text-white">Moliyaviy Panel</span>
+// 				</NavLink>
+
+// 				{/* Burger Menu */}
+// 				<button
+// 					className="navbar-toggler border-0"
+// 					type="button"
+// 					data-bs-toggle="collapse"
+// 					data-bs-target="#navbarNav"
+// 					aria-controls="navbarNav"
+// 					aria-expanded="false"
+// 					aria-label="Toggle navigation"
+// 				>
+// 					<span className="navbar-toggler-icon"></span>
+// 				</button>
+
+// 				{/* NavLinks */}
+// 				<div
+// 					className="collapse navbar-collapse"
+// 					id="navbarNav"
+// 				>
+// 					<ul
+// 						className="navbar-nav ms-auto text-center"
+// 						style={{
+// 							display: "flex",
+// 							justifyContent: "space-around",
+// 							alignItems: "center",
+// 							gap: "20px",
+// 							fontWeight: "bold",
+// 						}}
+// 					>
+// 						<li className="nav-item">
+// 							<NavLink
+// 								className="nav-link"
+// 								to="/"
+// 								end
+// 							>
+// 								Asosiy
+// 							</NavLink>
+// 						</li>
+// 						<li className="nav-item">
+// 							<NavLink
+// 								className="nav-link"
+// 								to="/transactions"
+// 							>
+// 								Tranzaksiyalar
+// 							</NavLink>
+// 						</li>
+// 						<li className="nav-item">
+// 							<NavLink
+// 								className="nav-link"
+// 								to="/reports"
+// 							>
+// 								Hisobotlar
+// 							</NavLink>
+// 						</li>
+// 					</ul>
+// 				</div>
+// 			</div>
+// 		</nav>
+// 	);
+// };
+
+// export default Navbar;

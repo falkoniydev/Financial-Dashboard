@@ -63,10 +63,16 @@ const CurrencyConverter: React.FC = () => {
 	if (error) return <div className="text-center text-danger">{error}</div>;
 
 	return (
-		<div className="container mt-4">
-			<div className="card shadow">
-				<div className="card-body">
-					<h3 className="card-title text-center">Valyuta Konvertori</h3>
+		<div className="container mt-4 ">
+			<div
+				className="card shadow"
+				style={{
+					backgroundImage: "url('/bgConvertor.jpg')",
+					color: "white",
+				}}
+			>
+				<div className="card-body ">
+					<h3 className="card-title text-center">Valyuta Ayirboshlash</h3>
 					<div className="row g-3">
 						<div className="col-md-4">
 							<input
@@ -112,7 +118,7 @@ const CurrencyConverter: React.FC = () => {
 					</div>
 					<div className="text-center mt-3">
 						<h4>
-							Natija: {convert()} {toCurrency}
+							Kursga hisoblash: {convert()} {toCurrency}
 						</h4>
 					</div>
 				</div>

@@ -1,3 +1,7 @@
+/* ******************************************************************************************** */
+
+/* GLOBAL STYLES */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -6,7 +10,9 @@
 
 body {
 	font-family: Arial, sans-serif;
-	background-color: #f2f2f2;
+	background-image: url("bg.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .container {
@@ -20,6 +26,8 @@ body {
 	height: 400px;
 	width: 100%;
 }
+
+/* ******************************************************************************************** */
 
 /* TransitionList design */
 
@@ -47,3 +55,126 @@ body {
 		font-size: 14px;
 	}
 }
+
+/* ******************************************************************************************** */
+
+/* Modal background */
+.custom-modal-bg {
+	background: rgba(0, 0, 0, 0.5);
+	animation: fadeIn 0.5s ease-out;
+}
+
+/* Modal content styling */
+.custom-modal {
+	border-radius: 12px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	background-color: #f9f9f9;
+	animation: slideIn 0.5s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes slideIn {
+	from {
+		transform: translateY(-50px);
+	}
+	to {
+		transform: translateY(0);
+	}
+}
+
+/* ******************************************************************************************** */
+
+/* Close Icon Animation */
+.close-icon {
+	font-size: 2rem;
+	color: #fff;
+	transition: transform 0.3s ease;
+}
+
+.close-icon:hover {
+	transform: rotate(90deg);
+}
+
+/* NavLink Hover Animation */
+.nav-link {
+	position: relative;
+	transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+	color: #ffdd57 !important;
+}
+
+.nav-link::after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 2px;
+	bottom: 0;
+	left: 50%;
+	background-color: #ffdd57;
+	transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+	width: 100%;
+	left: 0;
+}
+
+/* ******************************************************************************************** */
+
+/* Active NavLink Styling */
+.nav-link.active {
+	color: #ffdd57 !important; /* Maxsus rang */
+	position: relative;
+	font-weight: bold; /* Qalin shrift */
+}
+
+.nav-link.active::after {
+	content: "";
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50%;
+	height: 2px;
+	background-color: #ffdd57;
+	transition: width 0.3s ease;
+}
+
+.nav-link.active:hover::after {
+	width: 100%; /* Hover qilinganda chiziq kengayadi */
+}
+
+.nav-link:hover {
+	color: #ffc107 !important; /* Hover rang */
+}
+
+/* Smooth transition for all NavLinks */
+.nav-link {
+	transition: color 0.3s ease;
+}
+
+/* ******************************************************************************************** */
+
+.income {
+	background-image: url("/bgIncome.avif");
+}
+
+.expense {
+	background-image: url("/bgOutcome.avif");
+}
+
+.balance {
+	background-image: url("/bgBalance.jpg");
+}
+

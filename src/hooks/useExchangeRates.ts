@@ -18,7 +18,6 @@ export const useExchangeRates = () => {
 					setError("API ma’lumotlarini olishda xatolik yuz berdi.");
 				}
 				setLoading(false);
-				console.log(data);
 			} catch (err) {
 				setError("Valyuta ma’lumotlarini olishda xatolik.");
 				setLoading(false);

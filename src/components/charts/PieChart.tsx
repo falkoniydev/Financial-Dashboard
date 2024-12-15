@@ -1,14 +1,16 @@
 import React from "react";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
-import { useAppContext } from "../../context/AppContext";
+import { Transaction } from "../../types/Transaction";
 
 // Chart.js modullarini ro‘yxatdan o‘tkazish
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const PieChart: React.FC = () => {
-	const { transactions } = useAppContext();
+interface PieChartProps {
+	transactions: Transaction[];
+}
 
+const PieChart: React.FC<PieChartProps> = ({ transactions }) => {
 	// Xarajat kategoriyalarini hisoblash
 	const expenseCategories = transactions
 		.filter((t) => t.type === "expense" && t.category)
@@ -47,7 +49,11 @@ const PieChart: React.FC = () => {
 		<div className="card shadow mt-4">
 			<div className="card-body">
 				<h3 className="card-title text-center">Xarajat Kategoriyalari</h3>
-				<Pie data={data} />
+				{Object.keys(expenseCategories).length > 0 ? (
+					<Pie data={data} />
+				) : (
+					<p className="text-center">Ma'lumot topilmadi</p>
+				)}
 			</div>
 		</div>
 	);

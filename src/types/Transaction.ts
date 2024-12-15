@@ -1,9 +1,18 @@
+// types/Transaction.ts
 export interface Transaction {
-	id: number ;
+	id: number;
 	amount: number;
-	category?: string;
-	type?: "income" | "expense" | undefined | string; // Daromad yoki xarajat
+	category: string;
+	type: "income" | "expense" | string;
 	date: string;
-	note?: string;
-	currency?: string; // Valyuta turi (USD, EUR, UZS)
+	description?: string; // Izoh ixtiyoriy bo'lishi mumkin
+}
+
+export interface FormData {
+	amount: string; // Miqdor
+	category: string; // Kategoriya
+	date: string; // Sana
+	description: string; // Izoh
+	type: "income" | "expense" | string;
+	currency: string; // Valyuta
 }
